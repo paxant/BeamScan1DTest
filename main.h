@@ -6,7 +6,6 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <sched.h>
-#include ".vscode/vscode_macros.h"
 
 // Переменные для определения времени расчета
 clock_t start, end;
@@ -41,12 +40,12 @@ complex_t Rxx_ux[NUMBER_X][NUMBER_X];
 complex_t Rxx_uy[NUMBER_Y][NUMBER_Y];
 complex_t Vnm_x[NUMBER_X][THETTA_NUMBER_POINT];
 complex_t Vnm_y[NUMBER_Y][PHI_NUMBER_POINT];
-double BEAMscan_x[THETTA_NUMBER_POINT]; // одномерный спектр по theta
-double BEAMscan_y[PHI_NUMBER_POINT];    // одномерный спектр по phi
+complex_t BEAMscan_x[THETTA_NUMBER_POINT]; // одномерный спектр по theta
+complex_t BEAMscan_y[PHI_NUMBER_POINT];    // одномерный спектр по phi
 
 complex_t DigrArray[PHI_NUMBER_POINT][THETTA_NUMBER_POINT][NUMBER_Y][NUMBER_X];
 complex_t Rxx[NUMBER_X * NUMBER_Y][NUMBER_X * NUMBER_Y];
-double BEAMscan[PHI_NUMBER_POINT][THETTA_NUMBER_POINT]; // сохраняем комплекс
+complex_t BEAMscan[PHI_NUMBER_POINT][THETTA_NUMBER_POINT]; // сохраняем комплекс
 
 float Thetta_range[THETTA_NUMBER_POINT];
 float Phi_range[PHI_NUMBER_POINT];   
