@@ -244,7 +244,7 @@ struct sched_param param;
                 printf("Не удалось прочитать температуру.\n");
             start = clock();
 
-            // computing_Rxx1D();
+            computing_Rxx1D();
 
             compute_BEAMscan_1D();
 
@@ -1163,7 +1163,7 @@ void compute_BEAMscan_1D()
         }
         BEAMscan_x[i] = sum;
     }
-
+    
     // === Расчет BEAMscan_y ===
     for (int j = 0; j < lenPhi; j++)
     {
@@ -1417,7 +1417,7 @@ void plot_BEAMscan_x()
     }
     fclose(f);
 
-    // создаем скрипт для gnuplot
+    // скрипт для gnuplot
     FILE *gp = popen("gnuplot -persist", "w");
     if (gp)
     {
@@ -1426,7 +1426,7 @@ void plot_BEAMscan_x()
         fprintf(gp, "set ylabel 'Amplitude'\n");
         fprintf(gp, "plot 'beam_x.dat' with lines title 'BEAMscan_x'\n");
         fflush(gp);
-        // pclose(gp); // если хочешь закрыть окно автоматически
+        // pclose(gp); // закрыть окно автоматически
     }
 }
 

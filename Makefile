@@ -27,11 +27,11 @@ DEFS := $(if $(filter y,$(DEBUG_OUT_MESSAGE)),-DDEBUG_OUT_MESSAGE,) \
         $(if $(filter y,$(GRAFICS)),-DGRAFICS,) \
         -DTHETTA_NUMBER_POINT=241 \
         -DPHI_NUMBER_POINT=241 \
-        -DNUMBER_X=5 \
-        -DNUMBER_Y=6 \
+        -DNUMBER_X=20 \
+        -DNUMBER_Y=20 \
         -DNUMBER_SIGNALS=2 \
-        -DSNAPSHOTS=5 \
-        -DNUMB_CONTER_FOR=100 \
+        -DSNAPSHOTS=6 \
+        -DNUMB_CONTER_FOR=1 \
         -DMAX_LINE=256
 
 # --- Флаги компиляции с DEFS ---
